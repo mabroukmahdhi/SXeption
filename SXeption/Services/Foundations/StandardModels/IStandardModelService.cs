@@ -5,13 +5,14 @@
 // ---------------------------------------------------------------
 
 using System;
-using Xeptions;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 
-namespace SXeption.Models.StandardModels.Exceptions
+namespace SXeption.Services.Foundations.StandardModels
 {
-    public class InvalidStandardModelReferenceException : Xeption
+    public class IStandardModelService : IStandardModelService
     {
-        public InvalidStandardModelReferenceException(string message, Exception innerException)
-            : base(message, innerException) { }
     }
 }

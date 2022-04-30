@@ -1,6 +1,7 @@
 ﻿// ---------------------------------------------------------------
-// Copyright (c) Coalition of the Good-Hearted Engineers
-// FREE TO USE TO CONNECT THE WORLD
+// Copyright (c) Mabrouk Mahdhi All rights reserved.
+// Licensed under the MIT License.
+// See License.txt in the project root for license information.
 // ---------------------------------------------------------------
 
 using Xeptions;
