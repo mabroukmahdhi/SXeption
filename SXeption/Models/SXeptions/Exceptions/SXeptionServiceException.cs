@@ -4,13 +4,18 @@
 // See License.txt in the project root for license information.
 // ---------------------------------------------------------------
 
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 using Xeptions;
 
-namespace SXeption.Models.StandardModels.Exceptions
+namespace SXeption.Models.SXeptions.Exceptions
 {
-    public class StandardModelDependencyValidationException : Xeption, IStandardException
+    public class SXeptionServiceException : Xeption
     {
-        public StandardModelDependencyValidationException(string message, Xeption innerException)
+        public SXeptionServiceException(string message, Exception innerException)
             : base(message, innerException)
         { }
     }

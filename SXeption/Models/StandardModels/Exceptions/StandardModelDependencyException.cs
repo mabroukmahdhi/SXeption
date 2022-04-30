@@ -9,7 +9,7 @@ using Xeptions;
 
 namespace SXeption.Models.StandardModels.Exceptions
 {
-    public class StandardModelDependencyException : Xeption
+    public class StandardModelDependencyException : Xeption, IStandardException
     {
         public StandardModelDependencyException(string message, Exception innerException) :
             base(message, innerException)

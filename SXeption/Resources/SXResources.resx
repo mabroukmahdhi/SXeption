@@ -123,4 +123,10 @@
   <data name="MSG_MODEL_ALREADY_EXISTS" xml:space="preserve">
     <value>{0} with the same id already exists.</value>
   </data>
+  <data name="SF_MSG_FAILED_SERVICE_EXCEPTION" xml:space="preserve">
+    <value>Failed SXeption service occurred, please contact support</value>
+  </data>
+  <data name="SF_MSG_SERVICE_EXCEPTION" xml:space="preserve">
+    <value>SXeption service error occurred, contact support</value>
+  </data>
 </root>

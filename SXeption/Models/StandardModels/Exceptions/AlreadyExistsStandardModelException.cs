@@ -9,7 +9,7 @@ using Xeptions;
 
 namespace SXeption.Models.StandardModels.Exceptions
 {
-    public class AlreadyExistsStandardModelException : Xeption
+    public class AlreadyExistsStandardModelException : Xeption, IStandardException
     {
         public AlreadyExistsStandardModelException(string message, Exception innerException)
             : base(message, innerException)

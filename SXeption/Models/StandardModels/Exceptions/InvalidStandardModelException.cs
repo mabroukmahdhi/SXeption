@@ -8,7 +8,7 @@ using Xeptions;
 
 namespace SXeption.Models.StandardModels.Exceptions
 {
-    public class InvalidStandardModelException : Xeption
+    public class InvalidStandardModelException : Xeption, IStandardException
     {
         public InvalidStandardModelException(string message)
             : base(message)

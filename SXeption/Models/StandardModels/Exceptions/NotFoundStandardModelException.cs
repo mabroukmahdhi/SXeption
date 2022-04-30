@@ -9,7 +9,7 @@ using Xeptions;
 
 namespace SXeption.Models.StandardModels.Exceptions
 {
-    public class NotFoundStandardModelException : Xeption
+    public class NotFoundStandardModelException : Xeption, IStandardException
     {
         public NotFoundStandardModelException(string message, Guid commentId)
             : base(message)

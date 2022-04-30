@@ -77,5 +77,23 @@ namespace SXeption.Resources {
                 return ResourceManager.GetString("MSG_MODEL_ALREADY_EXISTS", resourceCulture);
             }
         }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Failed SXeption service occurred, please contact support.
+        /// </summary>
+        internal static string SF_MSG_FAILED_SERVICE_EXCEPTION {
+            get {
+                return ResourceManager.GetString("SF_MSG_FAILED_SERVICE_EXCEPTION", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to SXeption service error occurred, contact support.
+        /// </summary>
+        internal static string SF_MSG_SERVICE_EXCEPTION {
+            get {
+                return ResourceManager.GetString("SF_MSG_SERVICE_EXCEPTION", resourceCulture);
+            }
+        }
     }
 }

@@ -4,21 +4,20 @@
 // See License.txt in the project root for license information.
 // ---------------------------------------------------------------
 
+using SXeption.Models.StandardModels.Exceptions;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using SXeption.Models.StandardModels.Exceptions;
 
-namespace SXeption.Services.Foundations.StandardModels
+namespace SXeption.Services.Processings
 {
-    public interface IStandardModelService
+    public interface IStandardModelProcessingService
     {
         IStandardException CreateStandardException<TException>(
-             string message,
-             Exception innerException = null)
-            where TException : Exception, IStandardException;
-
+               string messageKey,
+               Exception innerException = null)
+              where TException : Exception, IStandardException;
     }
 }
