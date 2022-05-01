@@ -70,11 +70,101 @@ namespace SXeption.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Failed {0} storage error occurred, contact support..
+        /// </summary>
+        internal static string MSG_FAILED_MODEL_STORAGE_OCCURRED {
+            get {
+                return ResourceManager.GetString("MSG_FAILED_MODEL_STORAGE_OCCURRED", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Invalid {0}. Please correct the errors and try again..
+        /// </summary>
+        internal static string MSG_INVALID_MODEL {
+            get {
+                return ResourceManager.GetString("MSG_INVALID_MODEL", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Invalid {0} reference error occurred..
+        /// </summary>
+        internal static string MSG_INVALID_MODEL_REFERENCE {
+            get {
+                return ResourceManager.GetString("MSG_INVALID_MODEL_REFERENCE", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Locked {0} record exception, please try again later.
+        /// </summary>
+        internal static string MSG_LOCKED_MODEL {
+            get {
+                return ResourceManager.GetString("MSG_LOCKED_MODEL", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to {0} with the same id already exists..
         /// </summary>
         internal static string MSG_MODEL_ALREADY_EXISTS {
             get {
                 return ResourceManager.GetString("MSG_MODEL_ALREADY_EXISTS", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to {0} dependency error occurred, contact support..
+        /// </summary>
+        internal static string MSG_MODEL_DEPENDENCY {
+            get {
+                return ResourceManager.GetString("MSG_MODEL_DEPENDENCY", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to {0} dependency validation occurred, please try again..
+        /// </summary>
+        internal static string MSG_MODEL_DEPENDENCY_VALIDATION {
+            get {
+                return ResourceManager.GetString("MSG_MODEL_DEPENDENCY_VALIDATION", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Couldn&apos;t find {0} with id: {1}..
+        /// </summary>
+        internal static string MSG_MODEL_NOT_FOUND {
+            get {
+                return ResourceManager.GetString("MSG_MODEL_NOT_FOUND", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to {0} service error occurred, contact support..
+        /// </summary>
+        internal static string MSG_MODEL_SERVICE {
+            get {
+                return ResourceManager.GetString("MSG_MODEL_SERVICE", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to {0} validation errors occurred, please try again..
+        /// </summary>
+        internal static string MSG_MODEL_VALIDATION {
+            get {
+                return ResourceManager.GetString("MSG_MODEL_VALIDATION", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to {0} is null..
+        /// </summary>
+        internal static string MSG_NULL_MODEL {
+            get {
+                return ResourceManager.GetString("MSG_NULL_MODEL", resourceCulture);
             }
         }
         

@@ -120,8 +120,38 @@
   <data name="MSG_FAILED_MODEL_SERVICE_OCCURRED" xml:space="preserve">
     <value>Failed {0} service occurred, please contact support</value>
   </data>
+  <data name="MSG_FAILED_MODEL_STORAGE_OCCURRED" xml:space="preserve">
+    <value>Failed {0} storage error occurred, contact support.</value>
+  </data>
+  <data name="MSG_INVALID_MODEL" xml:space="preserve">
+    <value>Invalid {0}. Please correct the errors and try again.</value>
+  </data>
+  <data name="MSG_INVALID_MODEL_REFERENCE" xml:space="preserve">
+    <value>Invalid {0} reference error occurred.</value>
+  </data>
+  <data name="MSG_LOCKED_MODEL" xml:space="preserve">
+    <value>Locked {0} record exception, please try again later</value>
+  </data>
   <data name="MSG_MODEL_ALREADY_EXISTS" xml:space="preserve">
     <value>{0} with the same id already exists.</value>
+  </data>
+  <data name="MSG_MODEL_DEPENDENCY" xml:space="preserve">
+    <value>{0} dependency error occurred, contact support.</value>
+  </data>
+  <data name="MSG_MODEL_DEPENDENCY_VALIDATION" xml:space="preserve">
+    <value>{0} dependency validation occurred, please try again.</value>
+  </data>
+  <data name="MSG_MODEL_NOT_FOUND" xml:space="preserve">
+    <value>Couldn't find {0} with id: {1}.</value>
+  </data>
+  <data name="MSG_MODEL_SERVICE" xml:space="preserve">
+    <value>{0} service error occurred, contact support.</value>
+  </data>
+  <data name="MSG_MODEL_VALIDATION" xml:space="preserve">
+    <value>{0} validation errors occurred, please try again.</value>
+  </data>
+  <data name="MSG_NULL_MODEL" xml:space="preserve">
+    <value>{0} is null.</value>
   </data>
   <data name="SF_MSG_FAILED_SERVICE_EXCEPTION" xml:space="preserve">
     <value>Failed SXeption service occurred, please contact support</value>

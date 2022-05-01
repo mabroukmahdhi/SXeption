@@ -4,43 +4,94 @@
 // See License.txt in the project root for license information.
 // ---------------------------------------------------------------
 
+using SXeption.Brokers.Localizations;
+using SXeption.Brokers.Loggings;
 using SXeption.Models.StandardModels.Exceptions;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using Xeptions;
 
 namespace SXeption.Services.Foundations.StandardModels
 {
-    public class StandardModelService : IStandardModelService
+    public partial class StandardModelService<TModel> : IStandardModelService
     {
-        public IStandardException CreateStandardException<TException>(
-            string message,
-            Exception innerException = null)
-            where TException : Exception, IStandardException
+        private readonly ILocalizationBroker localizationBroker;
+        private readonly ILoggingBroker loggingBroker;
+
+        public StandardModelService(ILocalizationBroker localizationBroker)
+            => this.localizationBroker = localizationBroker;
+
+        public StandardModelService(
+            ILocalizationBroker localizationBroker,
+            ILoggingBroker loggingBroker)
         {
-
-            int parametersNbr = typeof(TException)
-                                    .GetConstructors()[0]
-                                    .GetParameters()
-                                    .Length;
-
-            if (parametersNbr == 1)
-            {
-                return (TException)Activator.CreateInstance(
-                    typeof(TException),
-                    new object[] { message });
-            }
-
-            if (parametersNbr == 2)
-            {
-                return (TException)Activator.CreateInstance(
-                   typeof(TException),
-                   new object[] { message, innerException });
-            }
-
-            return default;
+            this.localizationBroker = localizationBroker;
+            this.loggingBroker = loggingBroker;
         }
+
+        protected virtual StandardModelValidationException CreateAndLogValidationException(
+            Xeption exception)
+        {
+            string message = GetMessage("MSG_MODEL_VALIDATION", nameof(TModel));
+
+            var postValidationException =
+                new StandardModelValidationException(message, exception);
+
+            this.loggingBroker?.LogError(postValidationException);
+
+            return postValidationException;
+        }
+
+        protected virtual StandardModelDependencyException CreateAndLogCriticalDependencyException(
+            Xeption exception)
+        {
+            string message = GetMessage("MSG_MODEL_DEPENDENCY", nameof(TModel));
+
+            var postDependencyException = new StandardModelDependencyException(message, exception);
+            this.loggingBroker?.LogCritical(postDependencyException);
+
+            return postDependencyException;
+        }
+
+        protected virtual StandardModelDependencyValidationException CreateAndLogDependencyValidationException(
+            Xeption exception)
+        {
+            string message = GetMessage("MSG_MODEL_DEPENDENCY_VALIDATION", nameof(TModel));
+
+            var postDependencyValidationException =
+                new StandardModelDependencyValidationException(message, exception);
+
+            this.loggingBroker?.LogError(postDependencyValidationException);
+
+            return postDependencyValidationException;
+        }
+
+        protected virtual StandardModelDependencyException CreateAndLogDependencyException(
+            Xeption exception)
+        {
+            string message = GetMessage("MSG_MODEL_DEPENDENCY", nameof(TModel));
+
+            var postDependencyException = new StandardModelDependencyException(message, exception);
+            this.loggingBroker?.LogError(postDependencyException);
+
+            return postDependencyException;
+        }
+
+        protected virtual StandardModelServiceException CreateAndLogServiceException(
+            Exception exception)
+        {
+            string message = GetMessage("MSG_MODEL_SERVICE", nameof(TModel));
+
+            var postServiceException = new StandardModelServiceException(message, exception);
+            this.loggingBroker?.LogError(postServiceException);
+
+            return postServiceException;
+        }
+
+        public virtual string GetMessage(string key)
+            => this.localizationBroker.GetLocalizedText(key);
+
+        public virtual string GetMessage(string key, params object[] parameters)
+           => string.Format(GetMessage(key), parameters);
     }
 }
+

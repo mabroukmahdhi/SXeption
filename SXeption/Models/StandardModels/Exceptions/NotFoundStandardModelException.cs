@@ -11,7 +11,7 @@ namespace SXeption.Models.StandardModels.Exceptions
 {
     public class NotFoundStandardModelException : Xeption, IStandardException
     {
-        public NotFoundStandardModelException(string message, Guid commentId)
+        public NotFoundStandardModelException(string message, Guid modelId)
             : base(message)
         { }
     }
