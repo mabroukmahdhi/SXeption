@@ -8,7 +8,7 @@ using System;
 
 namespace SXeption.Brokers.Loggings
 {
-    public interface ILoggingBroker
+    public interface IStandardLoggingBroker
     {
         void LogInformation(string message);
         void LogTrace(string message);

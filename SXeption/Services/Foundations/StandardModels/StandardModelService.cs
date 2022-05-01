@@ -15,14 +15,14 @@ namespace SXeption.Services.Foundations.StandardModels
     public partial class StandardModelService<TModel> : IStandardModelService
     {
         private readonly ILocalizationBroker localizationBroker;
-        private readonly ILoggingBroker loggingBroker;
+        private readonly IStandardLoggingBroker loggingBroker;
 
         public StandardModelService(ILocalizationBroker localizationBroker)
             => this.localizationBroker = localizationBroker;
 
         public StandardModelService(
             ILocalizationBroker localizationBroker,
-            ILoggingBroker loggingBroker)
+            IStandardLoggingBroker loggingBroker)
         {
             this.localizationBroker = localizationBroker;
             this.loggingBroker = loggingBroker;
